@@ -20,7 +20,7 @@ class CreateEventsTable extends Migration
             $table->string('category');
             $table->text('description');
             $table->text('pictures');
-            $table->text('slug');
+            $table->text('slug')->unique();
             $table->boolean('is_publish')->default(1);
             $table->uuid('user_id');
             $table->timestamps();

@@ -18,7 +18,7 @@ class CreatePostsTable extends Migration
             $table->string('title');
             $table->string('category');
             $table->text('description');
-            $table->text('slug');
+            $table->text('slug')->unique();
             $table->text('tags');
             $table->text('pictures');
             $table->boolean('is_publish')->default(1);

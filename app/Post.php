@@ -18,4 +18,8 @@ class Post extends Model
     public function User(){
         return $this->belongsTo('App\User');
     }
+
+    public function scopeFindSlug($query,$slug){
+        return $query->where('slug','=',$slug)->firstOrFail();
+    }
 }
